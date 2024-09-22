@@ -1,0 +1,515 @@
+/*! HTML5 Boilerplate v9.0.1 | MIT License | https://html5boilerplate.com/ */
+
+/* main.css 3.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+   html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+  }
+  
+  /*
+   * Remove text-shadow in selection highlight:
+   * https://twitter.com/miketaylr/status/12228805301
+   *
+   * Customize the background color to match your design.
+   */
+  
+  ::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+  }
+  
+  ::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+  }
+  
+  /*
+   * A better looking default horizontal rule
+   */
+  
+  hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+  }
+  
+  /*
+   * Remove the gap between audio, canvas, iframes,
+   * images, videos and the bottom of their containers:
+   * https://github.com/h5bp/html5-boilerplate/issues/440
+   */
+  
+  audio,
+  canvas,
+  iframe,
+  img,
+  svg,
+  video {
+    vertical-align: middle;
+  }
+  
+  /*
+   * Remove default fieldset styles.
+   */
+  
+  fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /*
+   * Allow only vertical resizing of textareas.
+   */
+  
+  textarea {
+    resize: vertical;
+  }
+  
+  /* ==========================================================================
+     Author's custom styles
+     ========================================================================== */
+
+
+    body {
+        background-color: #000;
+    }
+
+    #screen-main {
+        width: 100%;
+        height: 100%;
+    }
+
+    #screen-main h1 {
+        color: rgb(193, 193, 193);
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 32px;
+        width: 100%;
+        text-align: center;
+        margin-top: calc(50vh - 16px);
+        letter-spacing: 4px;
+    }
+
+    #app {
+        background: #000;
+        height: 100vh;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        position: relative;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-size: cover;
+        background-position: center;
+      }
+      
+      #wrapper {
+        text-align: center;
+      }
+      
+      .glitch {
+        position: relative;
+        color: #ffffff;
+        font-size: 32px;
+        letter-spacing: 4px;
+        animation: glitch-skew 1s infinite linear alternate-reverse;
+      }
+      .glitch::before {
+        content: attr(data-text);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        left: 2px;
+        text-shadow: -2px 0 #000000;
+        clip: rect(44px, 450px, 56px, 0);
+        animation: glitch-anim 5s infinite linear alternate-reverse;
+      }
+      .glitch::after {
+        content: attr(data-text);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        left: -2px;
+        text-shadow: -2px 0 #000000, 2px 2px #000000;
+        clip: rect(44px, 450px, 56px, 0);
+        animation: glitch-anim2 5s infinite linear alternate-reverse;
+      }
+      
+      @keyframes glitch-anim {
+        0% {
+          clip: rect(72px, 9999px, 95px, 0);
+          transform: skew(0.89deg);
+        }
+        5% {
+          clip: rect(49px, 9999px, 97px, 0);
+          transform: skew(0.14deg);
+        }
+        10% {
+          clip: rect(52px, 9999px, 68px, 0);
+          transform: skew(0.45deg);
+        }
+        15% {
+          clip: rect(27px, 9999px, 43px, 0);
+          transform: skew(0.17deg);
+        }
+        20% {
+          clip: rect(77px, 9999px, 30px, 0);
+          transform: skew(0.95deg);
+        }
+        25% {
+          clip: rect(75px, 9999px, 10px, 0);
+          transform: skew(1deg);
+        }
+        30% {
+          clip: rect(29px, 9999px, 59px, 0);
+          transform: skew(0.41deg);
+        }
+        35% {
+          clip: rect(19px, 9999px, 24px, 0);
+          transform: skew(0.47deg);
+        }
+        40% {
+          clip: rect(99px, 9999px, 85px, 0);
+          transform: skew(0.12deg);
+        }
+        45% {
+          clip: rect(8px, 9999px, 2px, 0);
+          transform: skew(0.03deg);
+        }
+        50% {
+          clip: rect(5px, 9999px, 75px, 0);
+          transform: skew(0.93deg);
+        }
+        55% {
+          clip: rect(60px, 9999px, 94px, 0);
+          transform: skew(0.02deg);
+        }
+        60% {
+          clip: rect(83px, 9999px, 77px, 0);
+          transform: skew(0.96deg);
+        }
+        65% {
+          clip: rect(87px, 9999px, 82px, 0);
+          transform: skew(0.39deg);
+        }
+        70% {
+          clip: rect(34px, 9999px, 36px, 0);
+          transform: skew(0.46deg);
+        }
+        75% {
+          clip: rect(58px, 9999px, 63px, 0);
+          transform: skew(0.91deg);
+        }
+        80% {
+          clip: rect(55px, 9999px, 67px, 0);
+          transform: skew(0.88deg);
+        }
+        85% {
+          clip: rect(56px, 9999px, 90px, 0);
+          transform: skew(0.25deg);
+        }
+        90% {
+          clip: rect(75px, 9999px, 100px, 0);
+          transform: skew(0.48deg);
+        }
+        95% {
+          clip: rect(60px, 9999px, 73px, 0);
+          transform: skew(0.36deg);
+        }
+      }
+      @keyframes glitch-anim2 {
+        0% {
+          clip: rect(18px, 9999px, 58px, 0);
+          transform: skew(0.97deg);
+        }
+        5% {
+          clip: rect(56px, 9999px, 96px, 0);
+          transform: skew(0.72deg);
+        }
+        10% {
+          clip: rect(25px, 9999px, 82px, 0);
+          transform: skew(0.88deg);
+        }
+        15% {
+          clip: rect(63px, 9999px, 88px, 0);
+          transform: skew(0.06deg);
+        }
+        20% {
+          clip: rect(4px, 9999px, 67px, 0);
+          transform: skew(0.14deg);
+        }
+        25% {
+          clip: rect(12px, 9999px, 44px, 0);
+          transform: skew(0.34deg);
+        }
+        30% {
+          clip: rect(69px, 9999px, 55px, 0);
+          transform: skew(0.03deg);
+        }
+        35% {
+          clip: rect(77px, 9999px, 34px, 0);
+          transform: skew(0.05deg);
+        }
+        40% {
+          clip: rect(17px, 9999px, 87px, 0);
+          transform: skew(0.17deg);
+        }
+        45% {
+          clip: rect(84px, 9999px, 94px, 0);
+          transform: skew(0.64deg);
+        }
+        50% {
+          clip: rect(71px, 9999px, 65px, 0);
+          transform: skew(0.16deg);
+        }
+        55% {
+          clip: rect(18px, 9999px, 1px, 0);
+          transform: skew(0.48deg);
+        }
+        60% {
+          clip: rect(24px, 9999px, 38px, 0);
+          transform: skew(0.84deg);
+        }
+        65% {
+          clip: rect(53px, 9999px, 87px, 0);
+          transform: skew(0.51deg);
+        }
+        70% {
+          clip: rect(47px, 9999px, 2px, 0);
+          transform: skew(0.64deg);
+        }
+        75% {
+          clip: rect(29px, 9999px, 54px, 0);
+          transform: skew(0.2deg);
+        }
+        80% {
+          clip: rect(93px, 9999px, 72px, 0);
+          transform: skew(0.68deg);
+        }
+        85% {
+          clip: rect(65px, 9999px, 22px, 0);
+          transform: skew(0.38deg);
+        }
+        90% {
+          clip: rect(38px, 9999px, 1px, 0);
+          transform: skew(0.29deg);
+        }
+        95% {
+          clip: rect(57px, 9999px, 6px, 0);
+          transform: skew(0.37deg);
+        }
+      }
+      @keyframes glitch-skew {
+        0% {
+          transform: skew(-2deg);
+        }
+        10% {
+          transform: skew(0deg);
+        }
+        20% {
+          transform: skew(4deg);
+        }
+        30% {
+          transform: skew(-2deg);
+        }
+        40% {
+          transform: skew(1deg);
+        }
+        50% {
+          transform: skew(0deg);
+        }
+        60% {
+          transform: skew(0deg);
+        }
+        70% {
+          transform: skew(0deg);
+        }
+        80% {
+          transform: skew(-3deg);
+        }
+        90% {
+          transform: skew(4deg);
+        }
+      }
+  
+  /* ==========================================================================
+     Helper classes
+     ========================================================================== */
+  
+  /*
+   * Hide visually and from screen readers
+   */
+  
+  .hidden,
+  [hidden] {
+    display: none !important;
+  }
+  
+  /*
+   * Hide only visually, but have it available for screen readers:
+   * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+   *
+   * 1. For long content, line feeds are not interpreted as spaces and small width
+   *    causes content to wrap 1 word per line:
+   *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+   */
+  
+  .visually-hidden {
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    /* 1 */
+  }
+  
+  /*
+   * Extends the .visually-hidden class to allow the element
+   * to be focusable when navigated to via the keyboard:
+   * https://www.drupal.org/node/897638
+   */
+  
+  .visually-hidden.focusable:active,
+  .visually-hidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    white-space: inherit;
+    width: auto;
+  }
+  
+  /*
+   * Hide visually and from screen readers, but maintain layout
+   */
+  
+  .invisible {
+    visibility: hidden;
+  }
+  
+  /*
+   * Clearfix: contain floats
+   *
+   * The use of `table` rather than `block` is only necessary if using
+   * `::before` to contain the top-margins of child elements.
+   */
+  
+  .clearfix::before,
+  .clearfix::after {
+    content: "";
+    display: table;
+  }
+  
+  .clearfix::after {
+    clear: both;
+  }
+  
+  /* ==========================================================================
+     EXAMPLE Media Queries for Responsive Design.
+     These examples override the primary ('mobile first') styles.
+     Modify as content requires.
+     ========================================================================== */
+  
+  @media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+  }
+  
+  @media print,
+    (-webkit-min-device-pixel-ratio: 1.25),
+    (min-resolution: 1.25dppx),
+    (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+  }
+  
+  /* ==========================================================================
+     Print styles.
+     Inlined to avoid the additional HTTP request:
+     https://www.phpied.com/delay-loading-your-print-css/
+     ========================================================================== */
+  
+  @media print {
+    *,
+    *::before,
+    *::after {
+      background: #fff !important;
+      color: #000 !important;
+      /* Black prints faster */
+      box-shadow: none !important;
+      text-shadow: none !important;
+    }
+  
+    a,
+    a:visited {
+      text-decoration: underline;
+    }
+  
+    a[href]::after {
+      content: " (" attr(href) ")";
+    }
+  
+    abbr[title]::after {
+      content: " (" attr(title) ")";
+    }
+  
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+    a[href^="#"]::after,
+    a[href^="javascript:"]::after {
+      content: "";
+    }
+  
+    pre {
+      white-space: pre-wrap !important;
+    }
+  
+    pre,
+    blockquote {
+      border: 1px solid #999;
+      page-break-inside: avoid;
+    }
+  
+    tr,
+    img {
+      page-break-inside: avoid;
+    }
+  
+    p,
+    h2,
+    h3 {
+      orphans: 3;
+      widows: 3;
+    }
+  
+    h2,
+    h3 {
+      page-break-after: avoid;
+    }
+  }
